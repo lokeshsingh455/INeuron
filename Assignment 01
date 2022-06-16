@@ -1,0 +1,78 @@
+Q1. In the below elements which of them are values or an expression? eg:- values can be integer or string and expressions will be mathematical     operators.
+
+*       : Expression
+'hello' : Values
+-87.8   : Values
+-       : Expression
+/       : Expression
++       : Expression
+6       : Values
+
+
+Q2. What is the difference between string and variable?
+
+String : A string is a value representing text.
+Variable : A variable is a name where the string stored. 
+
+Q3. Describe three different data types.
+
+integer : An integer contains (-infinity) to (+infinity) values
+string  : A string a value representing text. 
+Boolean : Boolean contains two value 0 & 1 ( True / False )
+
+Q4. What is an expression made up of? What do all expressions do?
+
+Expression consist of 2 values and operator. its used for to get the result. 
+
+Example:
+    2+2 =4
+    here, 2 = value
+          + = operator
+          
+Q5. This assignment statements, like spam = 10. What is the difference between an expression and a statement?
+
+Expression : An expression refers usually piece of code that can be evaluated to a value. 
+Statement : A statement perform some action Such as printing values, looping etc.
+
+Q6. 6. After running the following code, what does the variable bacon contain?
+      bacon = 22
+      bacon + 1
+ 
+                 output :22
+ 
+Q7. What should the values of the following two terms be?
+    'spam' + 'spamspam' 
+    'spam' * 3
+                    
+                    'spam' + 'spamspam' : spamspamspam
+                    'spam' * 3          : spamspamspam
+
+Q8. Why is eggs a valid variable name while 100 is invalid?
+
+    egg comes in string format while 100 comes in integer/ value. We can not assisgn any value in integer.
+    
+Q9. What three functions can be used to get the integer, floating-point number, or string version of a value?
+
+        int() 
+        float()
+        str()
+
+Q10. Why does this expression cause an error? How can you fix it?
+     'I have eaten ' + 99 + ' burritos.'
+     
+     In this expression we are adding intiger and string thats why we are getting error. 
+     The correct expression is : 'I have eaten ' + '99' + ' burritos.'
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
