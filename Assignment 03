@@ -1,0 +1,65 @@
+Q1. Why are functions advantageous to have in your programs?
+
+Ans. Because of function we can  calculate 'n' number of calculation in a sec. 
+
+Q2.  When does the code in a function run: when it's specified or when it's called?
+
+Ans. When it's called.
+
+Q3.  What statement creates a function?
+
+Ans. "Def" keyword is used to create a function. 
+
+Q4. What is the difference between a function and a function call?
+
+Ans. function      :it's is a group of related statements that perform specific task. 
+     function call : we call a function ( create / default ) to perfom specific task and also save few lines of code multiple time. 
+
+Q5.  How many global scopes are there in a Python program? How many local scopes?
+
+Ans. For any python program, there can be one global / local scope. The global scope is created once the program started and get distroyed          with the termination of the python program but in local scope we create multiple according to the requirement of program. 
+
+Q6. What happens to variables in a local scope when the function call returns?
+
+Ans. local variables are destroyed once the function returns the control to the calling function. 
+
+Q7. What is the concept of a return value? Is it possible to have a return value in an expression?
+
+Ans. When the return value is executed the function exits immediately, and the return value is copied from the function back to the caller. 
+     Yes, if we define a function with an explicit return statement that has an explicit return value, then you can use that value in any        expression.
+     
+Q8. If a function does not have a return statement, what is the return value of a call to that function?
+
+Ans. None 
+
+Q9. How do you make a function variable refer to the global variable?
+
+ Ans.   a=21
+
+        def pc():
+            global a
+            a=2
+            print('local value', a)
+
+        pc()
+        print('global value',a)
+
+Q10. What is the data type of None?
+
+Ans. Data type can not be considered as a value of certail primitive data type or boolean values. 
+
+Q11.  What does the sentence import areallyourpetsnamederic do?
+
+Ans. Nothing, we will get error " no module name areallyourpetsnamederic "
+
+Q12.  If you had a bacon() feature in a spam module, what would you call it after importing spam?
+
+Ans. bacon() function is not exist yet, as per question. 
+
+Q13.  What can you do to save a programme from crashing if it encounters an error?
+
+Ans. error handeling: we will rectify that error to prevent from program crashing. 
+
+Q14. What is the purpose of the try clause? What is the purpose of the except clause?
+
+Ans. Try clause  test a block of code for error and the except clause handle the error. 
