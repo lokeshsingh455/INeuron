@@ -1,0 +1,93 @@
+Q1.  What does an empty dictionary's code look like?
+
+Ans. s={}
+
+Q2. What is the value of a dictionary value with the key 'foo' and the value 42?
+
+Ans. s={'foo':42}
+
+Q3. What is the most significant distinction between a dictionary and a list?
+
+Ans. Most significant difference:
+    List - items in list are Ordered
+    Dictionary : iten in dictionary are unordered  
+    
+Q4. What happens if you try to access spam['foo'] if spam is {'bar': 100}?
+
+Ans.
+    KeyError                                  Traceback (most recent call last)
+    C:\Users\LOKESH~1\AppData\Local\Temp/ipykernel_7480/1717283131.py in <module>
+          1 spam={'bar':100}
+    ----> 2 spam['foo']
+
+    KeyError: 'foo' 
+
+Q5. If a dictionary is stored in spam, what is the difference between the expressions 'cat' in spam and 'cat' in spam.keys()?
+
+Ans. There is no differnce, both check if 'cat' is key of the dictionary and if its a key, returns True.
+
+    spam ={'cat':100}
+    'cat' in spam
+    
+    o/p: True
+    
+    'cat' in spam.keys()
+     
+     o/p: True
+     
+Q6. If a dictionary is stored in spam, what is the difference between the expressions 'cat' in spam and 'cat' in spam.values()?
+
+Ans. 'cat' in spam checks whether there is a 'cat' key in the dictionary
+     'cat' in spam.values() checks whether there is a value 'cat' for one of the keys in spam.
+
+    spam ={'cat':100}
+    'cat' in spam
+
+      o/p : True
+      
+    spam ={'cat':100}
+    'cat' in spam.values()
+    
+    o/p : False
+    
+Q7. What is a shortcut for the following code?
+    if 'color' not in spam:
+    spam['color'] = 'black'
+
+Ans. This can be achieved by using setdefault() which Inserts key with a value of default if key is not in the dictionary
+     spam ={'cat':100}
+     spam.setdefault('color','black')
+     spam
+
+     O/P : {'cat': 100, 'color': 'black'}
+
+Q8. How do you "pretty print" dictionary values using which module and function?
+
+Ans. 
+
+import pprint
+
+dct_arr = [ {'Name': 'John', 'Age': '23', 'Country': 'USA'},
+  {'Name': 'Jose', 'Age': '44', 'Country': 'Spain'},
+  {'Name': 'Anne', 'Age': '29', 'Country': 'UK'},
+  {'Name': 'Lee', 'Age': '35', 'Country': 'Japan'}
+]
+
+pprint.pprint(dct_arr)   # printing with pprint()
+
+[{'Age': '23', 'Country': 'USA', 'Name': 'John'},
+ {'Age': '44', 'Country': 'Spain', 'Name': 'Jose'},
+ {'Age': '29', 'Country': 'UK', 'Name': 'Anne'},
+ {'Age': '35', 'Country': 'Japan', 'Name': 'Lee'}]
+ 
+ 
+ 
+print(dct_arr)  #Printing with print()
+
+[{'Name': 'John', 'Age': '23', 'Country': 'USA'}, {'Name': 'Jose', 'Age': '44', 'Country': 'Spain'}, {'Name': 'Anne', 'Age': '29', 'Country': 'UK'}, {'Name': 'Lee', 'Age': '35', 'Country': 'Japan'}]
+ 
+ 
+ 
+
+
+
