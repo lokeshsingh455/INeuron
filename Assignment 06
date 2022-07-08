@@ -1,0 +1,66 @@
+Q1.  What are escape characters, and how do you use them?
+
+Ans. In Python strings, the backslash "\" is a special character, also called the "escape" character. It is used in representing certain            whitespace characters: "\t" is a tab, "\n" is a newline, and "\r" is a carriage return
+
+     prefixing a special character with "\" turns it into an ordinary character. This is called "escaping". For example, "\'" is the single        quote character. 'It\'s Sunday' therefore is a valid string and equivalent to "It's Sunday". Likewise, '"' can be escaped:                "\"hello\"" is a string begins and ends with the literal double quote character. Finally, "\" can be used to escape itself: "\\"            is the literal backslash character.
+
+Q2. What do the escape characters n and t stand for?
+
+Ans. "\t" is a tab, "\n" is a newline
+
+Q3. What is the way to include backslash characters in a string?
+
+Ans. print('its a back slash \\ in a sentence')
+
+Q4. The string "Howl's Moving Castle" is a correct value. Why isn't the single quote character in the word Howl's not escaped a problem?
+
+Ans. The single quote in Howl's is fine because you've used double quotes to mark the beginning and end of the string. 
+     like wise we can use double quotes in with single quotes.
+
+Q5. How do you write a string of newlines if you don't want to use the n character?
+
+Ans. we can use the parameter end ='\n' in print function
+
+Q6. What are the values of the given expressions?
+    'Hello, world!'[1]    : 'e'
+    'Hello, world!'[0:5]  : 'Hello'
+    'Hello, world!'[:5]   : 'Hello'
+    'Hello, world!'[3:]   : 'lo, world!'
+    
+Q7. What are the values of the following expressions?
+    'Hello'.upper()            : 'HELLO'
+    'Hello'.upper().isupper()  : True
+    'Hello'.upper().lower()    : 'hello'
+    
+Q8. What are the values of the following expressions?
+    'Remember, remember, the fifth of July.'.split()   : ['Remember,', 'remember,', 'the', 'fifth', 'of', 'July.']
+    '-'.join('There can only one.'.split())            : 'There-can-only-one.'
+
+Q9. What are the methods for right-justifying, left-justifying, and centering a string?
+
+Ans. a1="Hi there"
+     a1.ljust(10,"*")
+      
+      o/p : 'Hi there**'
+      
+      a1="Hi there"
+     a1.rjust(10,"*")
+     
+     o/p: '**Hi there'
+     
+     a1="Hi there"
+     a1.center(20,"*")
+     
+    o/p: '******Hi there******'
+
+Q10. What is the best way to remove whitespace characters from the start or end?
+
+Ans. lstrip() -> removes white spaces from left of the string
+     rstrip() -> removes whitespaces from right of the string 
+
+
+
+
+
+
+
