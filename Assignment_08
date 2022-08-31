@@ -1,0 +1,94 @@
+1. Is the Python Standard Library included with PyInputPlus?
+    
+    PyInputPlus is not a part of the Python Standard Library, so you must install it separately using Pip
+
+2. Why is PyInputPlus commonly imported with import pyinputplus as pypi?
+
+    pypi is alias of PyInputPlus.
+    The as pyip code in the import statement saves us from typing pyinputplus each time we want to call a PyInputPlus function. Instead we can
+    use the shorter pyip name
+    
+3. How do you distinguish between inputInt() and inputFloat()?
+    
+    inputInt() : Accepts an integer value, and returns int value
+    inputFloat() : Accepts integer/floating point value and returns float value
+    Both takes additional parameters ‘min’, ‘max’, ‘greaterThan’ and ‘lessThan’  for bounds
+    
+4. Using PyInputPlus, how do you ensure that the user enters a whole number between 0 and 99?
+
+    In the inputint function we can set the min = 0 and max =99 to ensure user enters number between 0 and 99
+    
+        Ex- import pyinputplus as pyip
+            pyip.inputInt(min = 0, max =99)
+            
+            output: 180
+                    Number must be at maximum 99.
+
+5. What is transferred to the keyword arguments allowRegexes and blockRegexes?
+
+    we can also use regular expressions to specify whether an input is allowed or not. The allowRegexes and blockRegexes 
+    keyword arguments take a list of regular expression strings to determine what the PyInputPlus function will accept or 
+    reject as valid input.
+    
+        Ex- import pyinputplus as pyip
+            response = pyip.inputNum(allowRegexes=[r'(I|V|X|L|C|D|M)+', r'zero']) # it allowes roman letters as numbers too
+            
+            output:
+               l
+                'l' is not a number.
+                p
+                'p' is not a number.
+                V
+6. If a blank input is entered three times, what does inputStr(limit=3) do?
+
+    import pyinputplus as pyip
+    response = pyip.inputStr(limit=3)
+
+    output:
+        
+            Blank values are not allowed.
+
+            Blank values are not allowed.
+
+            Traceback (most recent call last):
+              File "C:\Users\lokes\PycharmProjects\scrapping\venv\lib\site-packages\pyinputplus\__init__.py", line 167, in _genericInput
+                possibleNewUserInput = validationFunc(
+              File "C:\Users\lokes\PycharmProjects\scrapping\venv\lib\site-packages\pyinputplus\__init__.py", line 243, in <lambda>
+                validationFunc = lambda value: pysv._prevalidationCheck(
+              File "C:\Users\lokes\PycharmProjects\scrapping\venv\lib\site-packages\pysimplevalidate\__init__.py", line 250, in _prevalidationCheck
+                _raiseValidationException(_("Blank values are not allowed."), excMsg)
+              File "C:\Users\lokes\PycharmProjects\scrapping\venv\lib\site-packages\pysimplevalidate\__init__.py", line 222, in _raiseValidationException
+                raise ValidationException(str(standardExcMsg))
+            pysimplevalidate.ValidationException: Blank values are not allowed.
+
+            During handling of the above exception, another exception occurred:
+
+            Traceback (most recent call last):
+              File "C:\Users\lokes\PycharmProjects\scrapping\main.py", line 2, in <module>
+                response = pyip.inputStr(limit=3)
+              File "C:\Users\lokes\PycharmProjects\scrapping\venv\lib\site-packages\pyinputplus\__init__.py", line 247, in inputStr
+                return _genericInput(
+              File "C:\Users\lokes\PycharmProjects\scrapping\venv\lib\site-packages\pyinputplus\__init__.py", line 188, in _genericInput
+                raise limitOrTimeoutException
+            pyinputplus.RetryLimitException
+            Blank values are not allowed.
+
+
+7. If blank input is entered three times, what does inputStr(limit=3, default='hello') do?
+
+    import pyinputplus as pyip
+    response = pyip.inputStr(limit=3,default='hello')
+    print(response)
+    
+    output: Blank values are not allowed.
+
+            Blank values are not allowed.
+
+            Blank values are not allowed.
+            hello
+
+    
+
+
+
+
